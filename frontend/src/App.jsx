@@ -6,10 +6,10 @@ import Register from "./pages/Register.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ProtectedRoutes from "./components/ProtectedRoutes.jsx";
 
-const logout = () => {
-  localStorage.clear();
-  return <Navigate to="/login" />;
-};
+const Logout = () => {
+  localStorage.clear()
+  return <Navigate to="/login" />
+}
 
 const RegisterAndLogout = () => {
   localStorage.clear();
@@ -29,8 +29,8 @@ const App = () => {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
-        <Route path="/logout" element={logout} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

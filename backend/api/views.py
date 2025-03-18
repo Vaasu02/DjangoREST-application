@@ -23,7 +23,7 @@ class CreateUserView(generics.CreateAPIView):
 
 # Create a view for handling note creation
 class NoteListCreate(generics.ListCreateAPIView):
-    sekializer_class = NoteSerializer
+    serializer_class = NoteSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
